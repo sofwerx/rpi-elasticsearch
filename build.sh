@@ -1,5 +1,6 @@
 #!/bin/bash -e
 . .env
+docker pull ${TRAVIS_REPO_SLUG}:latest || true
 docker build \
   --build-arg ELASTICSEARCH_VERSION=$ES_VERSION \
   --build-arg ELASTICSEARCH_TARBALL_SHA1=$ES_SHA1 \
