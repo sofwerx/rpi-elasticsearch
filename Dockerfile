@@ -1,6 +1,6 @@
 FROM multiarch/debian-debootstrap:armhf-jessie
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget curl
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget curl debian-keyring debian-archive-keyring
 
 # grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.10
